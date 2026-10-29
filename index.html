@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tom Adams · Last 2 Sessions Video Breakdown | Best Day Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bdm-void: #0a0d14;
+      --bdm-surface: #11151f;
+      --bdm-elevated: #171c28;
+      --bdm-tile: #1c2130;
+      --bdm-tile-hover: #232a3d;
+      --bdm-border: #262d40;
+      --bdm-border-strong: #36405a;
+      --bdm-text: #f3f6fc;
+      --bdm-text-muted: #9ba5bc;
+      --bdm-text-dim: #68738d;
+      --bdm-signal: #00e5f5;
+      --bdm-signal-soft: rgba(0, 229, 245, 0.14);
+      --bdm-good: #4ee89f;
+      --bdm-good-soft: rgba(78, 232, 159, 0.14);
+      --bdm-warn: #f7b955;
+      --bdm-warn-soft: rgba(247, 185, 85, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bdm-void);
+      color: var(--bdm-text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 4rem;
+    }
+
+    /* Top Brand Bar */
+    .topbar {
+      background: rgba(17, 21, 31, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--bdm-border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.85rem 1.5rem;
+    }
+    .topbar-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--bdm-signal), #0099ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #061018;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+      box-shadow: 0 0 20px rgba(0, 229, 245, 0.3);
+    }
+    .brand-text h1 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--bdm-text);
+    }
+    .brand-text p {
+      font-size: 0.78rem;
+      color: var(--bdm-text-muted);
+      font-weight: 500;
+    }
+    .topbar-badges {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--bdm-border);
+      background: var(--bdm-elevated);
+      color: var(--bdm-text-muted);
+    }
+    .pill-signal {
+      border-color: rgba(0, 229, 245, 0.4);
+      background: var(--bdm-signal-soft);
+      color: var(--bdm-signal);
+    }
+    .pill-good {
+      border-color: rgba(78, 232, 159, 0.4);
+      background: var(--bdm-good-soft);
+      color: var(--bdm-good);
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    /* Trainer Handoff Summary Banner */
+    .handoff-banner {
+      background: linear-gradient(180deg, var(--bdm-surface) 0%, #0e131d 100%);
+      border: 1px solid var(--bdm-border);
+      border-radius: 16px;
+      padding: 1.35rem 1.5rem;
+      margin-bottom: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.15rem;
+    }
+    .handoff-card {
+      background: var(--bdm-elevated);
+      border: 1px solid var(--bdm-border);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+    }
+    .handoff-card h3 {
+      font-size: 0.76rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--bdm-signal);
+      margin-bottom: 0.45rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .handoff-card.warn h3 {
+      color: var(--bdm-warn);
+    }
+    .handoff-card.good h3 {
+      color: var(--bdm-good);
+    }
+    .handoff-card p, .handoff-card li {
+      font-size: 0.87rem;
+      color: var(--bdm-text-muted);
+      line-height: 1.48;
+    }
+    .handoff-card ul {
+      padding-left: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.28rem;
+    }
+    .handoff-card strong {
+      color: var(--bdm-text);
+    }
+
+    /* Main Split Layout: Active Player + Details */
+    .stage-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 1.35rem;
+      margin-bottom: 1.75rem;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .stage-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .video-card {
+      background: var(--bdm-surface);
+      border: 1px solid var(--bdm-border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #05070b;
+    }
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+    .video-controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.15rem;
+      background: var(--bdm-elevated);
+      border-top: 1px solid var(--bdm-border);
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      background: var(--bdm-tile);
+      color: var(--bdm-text);
+      border: 1px solid var(--bdm-border-strong);
+      border-radius: 8px;
+      padding: 0.48rem 0.9rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .nav-btn:hover {
+      background: var(--bdm-tile-hover);
+      border-color: var(--bdm-signal);
+      color: var(--bdm-signal);
+    }
+    .speed-group {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .speed-btn {
+      background: var(--bdm-tile);
+      color: var(--bdm-text-muted);
+      border: 1px solid var(--bdm-border);
+      border-radius: 6px;
+      padding: 0.32rem 0.55rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .speed-btn.active {
+      background: var(--bdm-signal-soft);
+      color: var(--bdm-signal);
+      border-color: var(--bdm-signal);
+    }
+
+    /* Exercise Detail Panel */
+    .detail-card {
+      background: var(--bdm-surface);
+      border: 1px solid var(--bdm-border);
+      border-radius: 16px;
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.05rem;
+    }
+    .detail-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .detail-session-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--bdm-signal);
+      background: var(--bdm-signal-soft);
+      border: 1px solid rgba(0, 229, 245, 0.35);
+      padding: 0.28rem 0.65rem;
+      border-radius: 6px;
+    }
+    .detail-category-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--bdm-good);
+      background: var(--bdm-good-soft);
+      border: 1px solid rgba(78, 232, 159, 0.3);
+      padding: 0.28rem 0.65rem;
+      border-radius: 6px;
+    }
+    .detail-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--bdm-text);
+      line-height: 1.25;
+    }
+    .rx-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bdm-elevated);
+      border: 1px solid var(--bdm-border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .rx-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--bdm-text-dim);
+      font-weight: 700;
+    }
+    .rx-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--bdm-text);
+    }
+    .section-subtitle {
+      font-size: 0.76rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--bdm-text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .cues-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .cues-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--bdm-text);
+      background: var(--bdm-elevated);
+      border: 1px solid var(--bdm-border);
+      padding: 0.65rem 0.85rem;
+      border-radius: 10px;
+    }
+    .cues-list li::before {
+      content: "▸";
+      color: var(--bdm-signal);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .trainer-note-box {
+      background: rgba(247, 185, 85, 0.09);
+      border: 1px solid rgba(247, 185, 85, 0.35);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+    }
+    .trainer-note-box .note-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--bdm-warn);
+      margin-bottom: 0.3rem;
+    }
+    .trainer-note-box p {
+      font-size: 0.88rem;
+      color: var(--bdm-text);
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      background: var(--bdm-surface);
+      border: 1px solid var(--bdm-border);
+      padding: 0.85rem 1.15rem;
+      border-radius: 14px;
+    }
+    .tab-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: var(--bdm-tile);
+      color: var(--bdm-text-muted);
+      border: 1px solid var(--bdm-border);
+      padding: 0.55rem 1rem;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tab-btn:hover {
+      color: var(--bdm-text);
+      border-color: var(--bdm-border-strong);
+    }
+    .tab-btn.active {
+      background: var(--bdm-signal-soft);
+      color: var(--bdm-signal);
+      border-color: var(--bdm-signal);
+      box-shadow: 0 0 16px rgba(0, 229, 245, 0.18);
+    }
+    .tab-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 0.12rem 0.45rem;
+      border-radius: 999px;
+    }
+    .search-input {
+      background: var(--bdm-elevated);
+      border: 1px solid var(--bdm-border);
+      color: var(--bdm-text);
+      padding: 0.55rem 0.9rem;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      min-width: 240px;
+      outline: none;
+    }
+    .search-input:focus {
+      border-color: var(--bdm-signal);
+    }
+
+    /* Session Section Dividers & Grid */
+    .session-block {
+      margin-bottom: 2.25rem;
+    }
+    .session-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid var(--bdm-border);
+      flex-wrap: wrap;
+    }
+    .session-header h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--bdm-text);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .session-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--bdm-signal);
+      box-shadow: 0 0 10px var(--bdm-signal);
+    }
+    .session-header span {
+      font-size: 0.84rem;
+      color: var(--bdm-text-muted);
+    }
+
+    .tiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .exercise-tile {
+      background: var(--bdm-tile);
+      border: 1px solid var(--bdm-border);
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.16s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .exercise-tile:hover {
+      transform: translateY(-2px);
+      background: var(--bdm-tile-hover);
+      border-color: var(--bdm-border-strong);
+    }
+    .exercise-tile.active {
+      border: 2px solid var(--bdm-signal);
+      box-shadow: 0 0 22px rgba(0, 229, 245, 0.25);
+    }
+    .tile-thumb-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #070a10;
+      overflow: hidden;
+    }
+    .tile-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+    .exercise-tile:hover .tile-thumb-wrap img {
+      transform: scale(1.04);
+    }
+    .tile-num-badge {
+      position: absolute;
+      top: 0.55rem;
+      left: 0.55rem;
+      background: rgba(10, 13, 20, 0.86);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--bdm-border-strong);
+      color: var(--bdm-signal);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+    }
+    .tile-time-badge {
+      position: absolute;
+      bottom: 0.55rem;
+      right: 0.55rem;
+      background: rgba(10, 13, 20, 0.86);
+      color: var(--bdm-text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.69rem;
+      font-weight: 600;
+      padding: 0.18rem 0.45rem;
+      border-radius: 5px;
+    }
+    .tile-body {
+      padding: 0.85rem 0.95rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+    }
+    .tile-cat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--bdm-good);
+      font-weight: 700;
+    }
+    .tile-title {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--bdm-text);
+      line-height: 1.3;
+    }
+    .tile-rx {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--bdm-text-muted);
+      margin-top: auto;
+      padding-top: 0.35rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">BD</div>
+        <div class="brand-text">
+          <h1>BEST DAY FITNESS · TRAINER HANDOFF PORTAL</h1>
+          <p>Client: Tom Adams · Last 2 Personal Training Sessions (Station 1 · Coach Christopher Tolisano)</p>
+        </div>
+      </div>
+      <div class="topbar-badges">
+        <span class="pill pill-signal">38 TOTAL CLIPS</span>
+        <span class="pill pill-good">OCT 23 (18) + OCT 13 (20)</span>
+        <span class="pill">FULL-BODY VERIFIED</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Trainer Handoff Summary Banner -->
+    <section class="handoff-banner">
+      <div class="handoff-card">
+        <h3>⚡ Session 1 Focus (Fri, Oct 23)</h3>
+        <ul>
+          <li><strong>Knee Rehab & Quad Control:</strong> Banded Terminal Knee Extensions (TKEs), Aerobic Step Eccentric Single-Leg Taps (2×20/leg), and wider-stance Banded Squat to Calf Raises.</li>
+          <li><strong>Dynamic Core & Balance:</strong> Slosh Pipe Single-Leg Reach, Kettlebell Goblet Step & Rotate, Box Plank Knee Drives, and Scapular Push-ups.</li>
+          <li><strong>Decompression & Plyos:</strong> 3×20s Active Rig Hangs paired with Lateral Balance Hops and Two-Foot Hops.</li>
+        </ul>
+      </div>
+
+      <div class="handoff-card warn">
+        <h3>⚠️ Key Biomechanical & Modification Notes</h3>
+        <ul>
+          <li><strong>Hip Flexor / Psoas Tightness:</strong> On Oct 13, Tom's psoas cramped when going into Prone Back Extensions right after high-volume ab/hip-flexor work. Keep legs relaxed on prone extensions or break up ab/hip-flexor sets with glute bridges & Cobra press-ups.</li>
+          <li><strong>Right > Left Hip Flexor:</strong> Both hip flexors are tight, with the <strong>right side noticeably tighter</strong>. Half-kneeling active pelvic shifts work very well for him.</li>
+          <li><strong>TKE Cueing:</strong> Remind him to keep weight loaded on the front leg and press the knee back rather than shifting weight onto the rear foot.</li>
+        </ul>
+      </div>
+
+      <div class="handoff-card good">
+        <h3>✅ Movement Wins & Preferences</h3>
+        <ul>
+          <li><strong>Knees Responding Great:</strong> Reported knees felt "awesome" on the 2×20 eccentric step taps and wide-stance squats.</li>
+          <li><strong>Symmetry Cues:</strong> On floor sit-ups, watch his left shoulder (can dip/twist slightly); on TRX High Curls, cue "right elbow up" as he fatigues.</li>
+          <li><strong>Station Setup:</strong> Recorded at Station 1 using Plyo Box, Resistance Bands, Kettlebell, Slosh Pipe, TRX, Aerobic Step, and Slant Board.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Main Video Player & Coaching Detail Panel -->
+    <section class="stage-grid" id="player-stage">
+      <div class="video-card">
+        <div class="video-wrapper">
+          <video id="main-video" controls playsinline preload="metadata" poster="clips/s1_01.jpg">
+            <source id="main-video-src" src="clips/s1_01.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="video-controls-bar">
+          <div style="display:flex; gap:0.5rem;">
+            <button class="nav-btn" id="prev-btn" type="button">← Previous Clip</button>
+            <button class="nav-btn" id="next-btn" type="button">Next Clip →</button>
+          </div>
+          <div class="speed-group">
+            <span style="font-size:0.75rem; color:var(--bdm-text-muted); margin-right:0.25rem;">Speed:</span>
+            <button class="speed-btn" data-speed="0.5">0.5x</button>
+            <button class="speed-btn" data-speed="0.75">0.75x</button>
+            <button class="speed-btn active" data-speed="1">1x</button>
+            <button class="speed-btn" data-speed="1.25">1.25x</button>
+            <button class="speed-btn" data-speed="1.5">1.5x</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-meta">
+          <span class="detail-session-tag" id="detail-session">Session 1 · Fri, Oct 23</span>
+          <span class="detail-category-tag" id="detail-category">Warmup & Balance</span>
+        </div>
+        <h2 class="detail-title" id="detail-title">1. Single-Leg Balance & Leg Kicks</h2>
+
+        <div class="rx-box">
+          <div>
+            <div class="rx-label">Sets / Reps / Load</div>
+            <div class="rx-val" id="detail-rx">1 Set × 10 Reps / Side</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="rx-label">Session Window</div>
+            <div class="rx-val" id="detail-time">01:20 – 02:20</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-subtitle">Coaching Cues & Execution</div>
+          <ul class="cues-list" id="detail-cues"></ul>
+        </div>
+
+        <div class="trainer-note-box">
+          <div class="note-header">Trainer Handoff Note</div>
+          <p id="detail-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Tabs & Search -->
+    <section class="filter-bar">
+      <div class="tab-group">
+        <button class="tab-btn active" data-filter="all">
+          All Clips <span class="tab-count">38</span>
+        </button>
+        <button class="tab-btn" data-filter="2026-10-23">
+          Session 1 · Fri, Oct 23 <span class="tab-count">18</span>
+        </button>
+        <button class="tab-btn" data-filter="2026-10-13">
+          Session 2 · Tue, Oct 13 <span class="tab-count">20</span>
+        </button>
+      </div>
+      <input type="search" id="search-input" class="search-input" placeholder="Search exercise, cue, or muscle group..." />
+    </section>
+
+    <!-- Exercise Grids by Session -->
+    <div id="sessions-container"></div>
+
+  </main>
+
+  <script>
+    const EXERCISES = [
+  {
+    "id": "s1_01",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 1,
+    "name": "Single-Leg Balance & Leg Kicks",
+    "category": "Warmup & Balance",
+    "prescription": "1 Set \u00d7 10 Reps / Side",
+    "timestamp": "01:20 \u2013 02:20",
+    "video": "clips/s1_01.mp4",
+    "poster": "clips/s1_01.jpg",
+    "cues": [
+      "Kick forward while leaning the trunk slightly back to engage the core.",
+      "Keep the standing knee soft and stable without locking out.",
+      "Control the swing phase rather than using momentum."
+    ],
+    "trainerNote": "Dynamic warmup to activate hip flexors, core stability, and single-leg proprioception."
+  },
+  {
+    "id": "s1_02",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 2,
+    "name": "Banded Terminal Knee Extension (TKE)",
+    "category": "Knee Rehab & Mobility",
+    "prescription": "3 Sets \u00d7 10\u201312 Reps / Leg (Resistance Band)",
+    "timestamp": "03:20 \u2013 04:20",
+    "video": "clips/s1_02.mp4",
+    "poster": "clips/s1_02.jpg",
+    "cues": [
+      "Keep most of your weight loaded on the front working leg.",
+      "Press the knee all the way back into terminal extension while squeezing the glute.",
+      "Do not just shift the hips backward into the rear foot\u2014isolate the front quad/VMO."
+    ],
+    "trainerNote": "Key knee rehab movement for Tom. Watch that he presses the knee back through the quad rather than rocking weight onto his back foot."
+  },
+  {
+    "id": "s1_03",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 3,
+    "name": "Kettlebell Romanian Deadlift",
+    "category": "Lower Body Strength",
+    "prescription": "2 Sets \u00d7 12, 15 Reps (Kettlebell)",
+    "timestamp": "08:25 \u2013 09:25",
+    "video": "clips/s1_03.mp4",
+    "poster": "clips/s1_03.jpg",
+    "cues": [
+      "Wide stance, eyes up on the horizon, chin and chest lifted.",
+      "Send the hips straight back while keeping knees mostly straight.",
+      "Maintain a strong arch in the lower back with shoulders pulled back and core braced."
+    ],
+    "trainerNote": "Posterior chain and lower back strengthening. Responds very well to 'eyes on the horizon' and 'shoulders back' cues."
+  },
+  {
+    "id": "s1_04",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 4,
+    "name": "Box Plank Knee Drive to Side Kick",
+    "category": "Core & Hip Stability",
+    "prescription": "1 Set \u00d7 15 Reps",
+    "timestamp": "10:35 \u2013 11:35",
+    "video": "clips/s1_04.mp4",
+    "poster": "clips/s1_04.jpg",
+    "cues": [
+      "Start in a strong hands-elevated push-up position on the plyo box.",
+      "Drive the knee forward toward the arms first, then kick straight out to the side.",
+      "Keep hips level\u2014don't let the hips sag or pike up during the kick."
+    ],
+    "trainerNote": "Tendency is to kick out to the side before driving the knee forward; cue 'knee forward first, then kick out'."
+  },
+  {
+    "id": "s1_05",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 5,
+    "name": "Split-Stance Resistance Band Row",
+    "category": "Upper Body Strength",
+    "prescription": "2 Sets \u00d7 18, 20 Reps (Resistance Band)",
+    "timestamp": "12:10 \u2013 13:10",
+    "video": "clips/s1_05.mp4",
+    "poster": "clips/s1_05.jpg",
+    "cues": [
+      "Staggered stance (left foot forward on Set 1, switch on Set 2).",
+      "Choke up on the band for strong tension and wrap all fingers firmly (avoid pinky pinch).",
+      "Drive elbows back and squeeze shoulder blades together at peak contraction."
+    ],
+    "trainerNote": "Have him grip higher up on the band with a full fist grip so the band doesn't pinch his pinky."
+  },
+  {
+    "id": "s1_06",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 6,
+    "name": "Kettlebell Goblet Step & Rotate",
+    "category": "Core & Rotational Strength",
+    "prescription": "1 Set \u00d7 15 Reps (Kettlebell)",
+    "timestamp": "14:57 \u2013 15:57",
+    "video": "clips/s1_06.mp4",
+    "poster": "clips/s1_06.jpg",
+    "cues": [
+      "Hold the kettlebell at chest height\u2014do not rest it against the chest.",
+      "Step forward and perform a slow, controlled trunk rotation over the lead leg.",
+      "Keep the entire midsection braced throughout the step and return."
+    ],
+    "trainerNote": "Keeping the bell slightly off the chest forces continuous shoulder, arm, and anterior core engagement."
+  },
+  {
+    "id": "s1_07",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 7,
+    "name": "In-and-Out Squat Hops",
+    "category": "Agility & Plyometrics",
+    "prescription": "1 Set \u00d7 15 Reps",
+    "timestamp": "16:52 \u2013 17:52",
+    "video": "clips/s1_07.mp4",
+    "poster": "clips/s1_07.jpg",
+    "cues": [
+      "Alternate between a wide squat stance and a narrow stance with light, springy hops.",
+      "Sink deeper into the hips on the wide landings.",
+      "Mind ankle clearance on the narrow hop so the inner ankle bones don't tap together."
+    ],
+    "trainerNote": "Great elasticity and footwork drill; remind him to leave a couple inches between feet on the narrow hop."
+  },
+  {
+    "id": "s1_08",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 8,
+    "name": "Slosh Pipe Single-Leg Reach",
+    "category": "Core & Dynamic Stability",
+    "prescription": "1 Set \u00d7 12 Reps",
+    "timestamp": "18:46 \u2013 19:46",
+    "video": "clips/s1_08.mp4",
+    "poster": "clips/s1_08.jpg",
+    "cues": [
+      "Step one leg back while pressing the water-filled slosh pipe overhead and slightly forward.",
+      "Move slowly and deliberately\u2014don't slingshot the pipe or let the moving water throw you off.",
+      "Reach through a full overhead shoulder range while stabilizing the trunk."
+    ],
+    "trainerNote": "Excellent reactive core & shoulder stability work using the 2011 water pipe."
+  },
+  {
+    "id": "s1_09",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 9,
+    "name": "Aerobic Step Eccentric Single-Leg Taps",
+    "category": "Knee Rehab & Lower Strength",
+    "prescription": "2 Sets \u00d7 20 Reps / Leg",
+    "timestamp": "22:07 \u2013 23:07",
+    "video": "clips/s1_09.mp4",
+    "poster": "clips/s1_09.jpg",
+    "cues": [
+      "Stand on top of the aerobic step and use light hand support only for balance.",
+      "Lower the non-working foot down for a light floor tap\u2014do not transfer weight onto the floor.",
+      "Keep 95%+ of the load on the top leg with smooth knee tracking."
+    ],
+    "trainerNote": "High-rep eccentric quad and knee control. Tom noted his knees felt 'awesome' during these sets."
+  },
+  {
+    "id": "s1_10",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 10,
+    "name": "Banded Triceps Pressdown",
+    "category": "Upper Body Strength",
+    "prescription": "2 Sets \u00d7 20 Reps + 5 Straight-Arm Finisher",
+    "timestamp": "25:00 \u2013 25:55",
+    "video": "clips/s1_10.mp4",
+    "poster": "clips/s1_10.jpg",
+    "cues": [
+      "Step in close to the anchor point with elbows pinned tight to the ribs.",
+      "Start from a 90-degree elbow bend and press all the way down to full lockout.",
+      "Follow immediately with straight-arm lat pressdowns keeping shoulders depressed."
+    ],
+    "trainerNote": "Upper body active recovery while letting his legs recover from the step taps."
+  },
+  {
+    "id": "s1_11",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 11,
+    "name": "Quadruped Box Knee Hover & Tuck",
+    "category": "Core Stability",
+    "prescription": "1 Set \u00d7 12 Reps",
+    "timestamp": "29:00 \u2013 29:58",
+    "video": "clips/s1_11.mp4",
+    "poster": "clips/s1_11.jpg",
+    "cues": [
+      "Walk feet in half the distance toward the plyo box and stay high on the toes.",
+      "Drive the knees down and forward toward the bottom corner where the box meets the floor.",
+      "Hover just above the floor without resting, then return under control."
+    ],
+    "trainerNote": "Cue driving the knees toward the base corner of the box rather than letting the hips rise high."
+  },
+  {
+    "id": "s1_12",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 12,
+    "name": "Banded Squat to Calf Raise",
+    "category": "Lower Body Strength",
+    "prescription": "1 Set \u00d7 15 Reps (Resistance Band)",
+    "timestamp": "35:02 \u2013 36:02",
+    "video": "clips/s1_12.mp4",
+    "poster": "clips/s1_12.jpg",
+    "cues": [
+      "Keep light tension on the resistance bands with elbows pulled slightly back.",
+      "Use a slightly wider stance, sit the hips back like sitting into a chair, and don't let knees buckle inward.",
+      "Drive up out of the squat directly into a calf raise, squeezing glutes and bracing core at the top."
+    ],
+    "trainerNote": "Widening his stance slightly eliminated any knee valgus and felt comfortable on his knees."
+  },
+  {
+    "id": "s1_13",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 13,
+    "name": "Box Plank Scapular Push-ups",
+    "category": "Core & Shoulder Stability",
+    "prescription": "1 Set \u00d7 12 Reps",
+    "timestamp": "37:07 \u2013 38:07",
+    "video": "clips/s1_13.mp4",
+    "poster": "clips/s1_13.jpg",
+    "cues": [
+      "Hold a straight-arm incline plank on the box with core and glutes braced.",
+      "Let the chest drop toward the elbows so the shoulder blades pinch together.",
+      "Press the chest back up to spread the shoulder blades wide apart without bending the elbows."
+    ],
+    "trainerNote": "Joking 'Tom's #1 most requested exercise of the decade'\u2014great serratus anterior and scapular control drill."
+  },
+  {
+    "id": "s1_14",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 14,
+    "name": "Reverse Crunch to Sit-up",
+    "category": "Core Strength",
+    "prescription": "2 Sets \u00d7 5 Reps, 15 Reps",
+    "timestamp": "38:34 \u2013 39:29",
+    "video": "clips/s1_14.mp4",
+    "poster": "clips/s1_14.jpg",
+    "cues": [
+      "Lie back with knees bent, pull the knees up into a reverse crunch first.",
+      "Plant the feet and come all the way up into a full sit-up, lifting the chest tall at the top.",
+      "Control the eccentric lowering phase back to the mat."
+    ],
+    "trainerNote": "Performed an initial set of 5 reps here and returned at the very end of the session for a 15-rep finisher."
+  },
+  {
+    "id": "s1_15",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 15,
+    "name": "Seated Heel-to-Toe Taps",
+    "category": "Core & Hip Flexor / Adductor",
+    "prescription": "1 Set \u00d7 10 Reps",
+    "timestamp": "40:34 \u2013 41:18",
+    "video": "clips/s1_15.mp4",
+    "poster": "clips/s1_15.jpg",
+    "cues": [
+      "Sit tall on the mat with legs extended straight out in front and hands free (no floor support).",
+      "Lift one straight leg up and across to tap the heel to the opposite toe, then alternate.",
+      "Maintain upright posture without slumping backward."
+    ],
+    "trainerNote": "Targets inner thigh (adductors), hip flexors, and unsupported seated trunk stability."
+  },
+  {
+    "id": "s1_16",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 16,
+    "name": "Rig Dead Hang (Active Pull Hang)",
+    "category": "Shoulder Mobility & Grip Strength",
+    "prescription": "3 Sets \u00d7 20s Holds",
+    "timestamp": "45:22 \u2013 46:12",
+    "video": "clips/s1_16.mp4",
+    "poster": "clips/s1_16.jpg",
+    "cues": [
+      "Lean back with ~90% of body weight supported through the hands, toes lightly touching the floor.",
+      "Keep eyes and breastplate lifted toward the ceiling, shoulders pulled down and back.",
+      "Bend the elbows slightly to engage lats, biceps, and upper back for a 20-second isometric hold."
+    ],
+    "trainerNote": "Performed 3 rounds of 20s holds supersetted with plyometric hops at the end of the workout."
+  },
+  {
+    "id": "s1_17",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 17,
+    "name": "Lateral Hop to Single-Leg Balance",
+    "category": "Agility & Plyometrics",
+    "prescription": "1 Set \u00d7 12 Reps",
+    "timestamp": "47:35 \u2013 48:35",
+    "video": "clips/s1_17.mp4",
+    "poster": "clips/s1_17.jpg",
+    "cues": [
+      "Hop laterally from one foot to the other and immediately stick the landing on a single leg.",
+      "Lift the non-working leg cleanly and establish full balance before hopping back.",
+      "Absorb the landing softly through the hip and knee."
+    ],
+    "trainerNote": "Paired back-to-back between sets of Rig Hangs to train frontal-plane ankle/knee stability under fatigue."
+  },
+  {
+    "id": "s1_18",
+    "session": "2026-10-23",
+    "sessionLabel": "Session 1 \u00b7 Fri, Oct 23",
+    "order": 18,
+    "name": "Forward & Backward Two-Foot Hops",
+    "category": "Agility & Plyometrics",
+    "prescription": "1 Set \u00d7 12 Reps",
+    "timestamp": "50:52 \u2013 51:40",
+    "video": "clips/s1_18.mp4",
+    "poster": "clips/s1_18.jpg",
+    "cues": [
+      "Hop forward and backward rhythmically on the balls of the feet.",
+      "Ensure both feet leave the ground and land at the exact same moment in time.",
+      "Keep ankles springy and knees tracking straight."
+    ],
+    "trainerNote": "Final plyometric drill before his last 20s hang and 15-rep sit-up finisher."
+  },
+  {
+    "id": "s2_01",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 1,
+    "name": "Incline Plank Knee Taps on Plyo Box",
+    "category": "Core Stability",
+    "prescription": "30s Plank Hold + 6 Slow Knee Taps",
+    "timestamp": "02:45 \u2013 03:45",
+    "video": "clips/s2_01.mp4",
+    "poster": "clips/s2_01.jpg",
+    "cues": [
+      "Forearms on the plyo box, toes walked close together, shoulder blades pinched slightly.",
+      "Hold a strict plank first, then slowly bend both knees as if tapping the ground.",
+      "Extend the knees back to a full plank while keeping the core locked."
+    ],
+    "trainerNote": "Great warmup core activation; Tom's form on the forearm incline plank is very solid."
+  },
+  {
+    "id": "s2_02",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 2,
+    "name": "Single-Leg Balance Hinge with Overhead Bar Reach",
+    "category": "Mobility & Balance",
+    "prescription": "1 Set \u00d7 12 Reps",
+    "timestamp": "04:25 \u2013 05:30",
+    "video": "clips/s2_02.mp4",
+    "poster": "clips/s2_02.jpg",
+    "cues": [
+      "Pull the bar apart outward ('like ripping it in half') to activate the rear delts and upper back.",
+      "Hinge forward on one leg while reaching the bar as high overhead as possible.",
+      "Keep the posterior shoulder muscles engaged throughout the forward lean."
+    ],
+    "trainerNote": "Combines single-leg balance with active overhead shoulder flexion and thoracic extension."
+  },
+  {
+    "id": "s2_03",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 3,
+    "name": "TRX Forward Lean Chest Stretch & Step",
+    "category": "Shoulder & Chest Mobility",
+    "prescription": "1 Set \u00d7 8 Reps",
+    "timestamp": "06:08 \u2013 07:08",
+    "video": "clips/s2_03.mp4",
+    "poster": "clips/s2_03.jpg",
+    "cues": [
+      "Hold TRX handles with elbows bent at 90 degrees.",
+      "Walk forward and lean into an active chest and anterior shoulder stretch, keeping pecs/shoulders engaged.",
+      "Step forward slightly further to increase the challenge, then walk back under control."
+    ],
+    "trainerNote": "Active eccentric chest/shoulder opener\u2014keep arms at 90 degrees throughout."
+  },
+  {
+    "id": "s2_04",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 4,
+    "name": "Floor Sit-up",
+    "category": "Core Strength",
+    "prescription": "1 Set \u00d7 18 Reps",
+    "timestamp": "08:55 \u2013 10:00",
+    "video": "clips/s2_04.mp4",
+    "poster": "clips/s2_04.jpg",
+    "cues": [
+      "Full range floor sit-ups keeping both shoulders rising evenly.",
+      "Watch for slight left-shoulder dropping/twisting on the way up\u2014cue symmetrical trunk flexion.",
+      "Exhale at the top and control the descent."
+    ],
+    "trainerNote": "Watch for a subtle twist toward the left shoulder when fatigued; once cued, he corrects it immediately."
+  },
+  {
+    "id": "s2_05",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 5,
+    "name": "Glute Bridge Hold with Single-Leg Extension",
+    "category": "Glute & Posterior Strength",
+    "prescription": "1 Set \u00d7 35s Work / Alternating Extensions",
+    "timestamp": "10:08 \u2013 11:08",
+    "video": "clips/s2_05.mp4",
+    "poster": "clips/s2_05.jpg",
+    "cues": [
+      "Drive through the heels and squeeze the glutes to lift the hips as high as possible.",
+      "Maintain full hip extension without letting the pelvis drop as the leg extends.",
+      "Focus on glute contraction to reciprocally inhibit tight hip flexors."
+    ],
+    "trainerNote": "Important counter-movement after sit-ups to get full hip extension and glute firing."
+  },
+  {
+    "id": "s2_06",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 6,
+    "name": "Supine Straight Leg Raise",
+    "category": "Core & Hip Flexor Control",
+    "prescription": "1 Set \u00d7 13 Reps",
+    "timestamp": "12:38 \u2013 13:38",
+    "video": "clips/s2_06.mp4",
+    "poster": "clips/s2_06.jpg",
+    "cues": [
+      "Lie flat with legs extended straight out on the mat.",
+      "Raise one leg straight toward the ceiling keeping the knee locked.",
+      "Lower the leg back down slowly and under strict eccentric control."
+    ],
+    "trainerNote": "Slow eccentric lowering is key here; note that heavy ab + hip flexor volume can tighten his psoas."
+  },
+  {
+    "id": "s2_07",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 7,
+    "name": "Dead Bug Crunch Hold (90/90 Abdominal Crunch)",
+    "category": "Core Isolation",
+    "prescription": "1 Set \u00d7 12 Reps",
+    "timestamp": "14:35 \u2013 15:25",
+    "video": "clips/s2_07.mp4",
+    "poster": "clips/s2_07.jpg",
+    "cues": [
+      "Hold knees at a 90-degree tabletop angle with arms reaching straight toward the sky.",
+      "Lift the head and shoulders straight up toward the ceiling rather than curling forward.",
+      "Pause briefly at the top of each isolated upper-abdominal contraction."
+    ],
+    "trainerNote": "Isolates the rectus abdominis while keeping the lumbar spine neutral on the mat."
+  },
+  {
+    "id": "s2_08",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 8,
+    "name": "Prone Back Extension (Superman)",
+    "category": "Posterior Chain & Back Strength",
+    "prescription": "1 Set \u00d7 4 Reps (Modified for Hip Flexor Tightness)",
+    "timestamp": "16:15 \u2013 17:10",
+    "video": "clips/s2_08.mp4",
+    "poster": "clips/s2_08.jpg",
+    "cues": [
+      "Lie prone with arms by the sides, squeeze the glutes, and lift the chest as high off the floor as possible.",
+      "Modification: Keep legs/knees relaxed on the floor and focus on upper-body extension + glute squeeze if psoas/hip flexor feels tight."
+    ],
+    "trainerNote": "IMPORTANT HANDOFF NOTE: Tom's psoas/hip flexor cramped when lifting his legs into full prone extension after heavy ab work. We immediately pivoted to Cobra press-ups and kneeling hip flexor mobility."
+  },
+  {
+    "id": "s2_09",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 9,
+    "name": "Prone Press-Up Cobra Stretch",
+    "category": "Hip Flexor & Anterior Core Mobility",
+    "prescription": "5 Sets \u00d7 5-Second Active Holds",
+    "timestamp": "17:56 \u2013 18:36",
+    "video": "clips/s2_09.mp4",
+    "poster": "clips/s2_09.jpg",
+    "cues": [
+      "Place hands on the mat next to the chest and keep hips and knees grounded.",
+      "Squeeze the glutes and press the chest up to actively lengthen the abdominals and hip flexors.",
+      "Hold for a 5-second count at the top, then relax and repeat for 5 reps."
+    ],
+    "trainerNote": "Used immediately to release the abdominal/psoas cramp\u2014worked very well."
+  },
+  {
+    "id": "s2_10",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 10,
+    "name": "Tall Kneeling Hip Flexor Mobilization",
+    "category": "Hip Mobility",
+    "prescription": "1 Set \u00d7 10 Reps",
+    "timestamp": "20:30 \u2013 21:30",
+    "video": "clips/s2_10.mp4",
+    "poster": "clips/s2_10.jpg",
+    "cues": [
+      "Start in a tall-kneeling posture on the mat with trunk upright.",
+      "Dip the hips slightly back, then drive the hips forward by forcefully squeezing the glutes.",
+      "Feel the reciprocal stretch through the front of the hips and lower abdominals."
+    ],
+    "trainerNote": "Functional progression from the floor press-up to open the anterior chain using active glute contraction."
+  },
+  {
+    "id": "s2_11",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 11,
+    "name": "Half-Kneeling Active Hip Flexor Stretch",
+    "category": "Hip Mobility",
+    "prescription": "1 Set \u00d7 10 Reps / Side (Right & Left)",
+    "timestamp": "22:52 \u2013 23:52",
+    "video": "clips/s2_11.mp4",
+    "poster": "clips/s2_11.jpg",
+    "cues": [
+      "Step one foot well out in front in a half-kneeling stance.",
+      "Translate the entire pelvis forward without leaning the trunk forward.",
+      "Hold the end-range stretch for 1\u20132 seconds, then press back out of it and repeat on both sides."
+    ],
+    "trainerNote": "Assessment note: Both hip flexors are tight, with the RIGHT hip flexor noticeably tighter than the left. Spend extra time opening his right hip flexor."
+  },
+  {
+    "id": "s2_12",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 12,
+    "name": "In-and-Out Hops",
+    "category": "Agility & Plyometrics",
+    "prescription": "1 Set \u00d7 12 Reps",
+    "timestamp": "25:38 \u2013 26:38",
+    "video": "clips/s2_12.mp4",
+    "poster": "clips/s2_12.jpg",
+    "cues": [
+      "Hop feet out wide and back in narrow with soft, quiet landings on the balls of the feet.",
+      "Maintain athletic knee and hip flexion on every landing.",
+      "Keep breathing rhythmically throughout the set."
+    ],
+    "trainerNote": "Good lower-leg elasticity and foot speed work after opening up the hips."
+  },
+  {
+    "id": "s2_13",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 13,
+    "name": "Incline Bear Plank Knee Bends on Box",
+    "category": "Core & Lower Body Mobility",
+    "prescription": "1 Set \u00d7 10 Reps",
+    "timestamp": "28:35 \u2013 29:33",
+    "video": "clips/s2_13.mp4",
+    "poster": "clips/s2_13.jpg",
+    "cues": [
+      "Hands planted on the plyo box, push hips back slightly and bend the knees down low.",
+      "Aim to get the knees as low as possible\u2014almost tapping the floor\u2014then press back up.",
+      "Keep shoulders strong and core braced throughout."
+    ],
+    "trainerNote": "Once cued to drop the knees as low as possible toward the floor, his range of motion was excellent."
+  },
+  {
+    "id": "s2_14",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 14,
+    "name": "Single-Leg Backward Diagonal Kick",
+    "category": "Balance & Glute Medius / Hip Mobility",
+    "prescription": "1 Set \u00d7 12 Reps",
+    "timestamp": "32:02 \u2013 33:07",
+    "video": "clips/s2_14.mp4",
+    "poster": "clips/s2_14.jpg",
+    "cues": [
+      "Keep the standing front toe pointed straight ahead with hands on hips.",
+      "Chamber the non-standing knee up first, then kick backward on a diagonal angle while looking back.",
+      "Looking back intentionally challenges vestibular balance while firing the glute."
+    ],
+    "trainerNote": "'Karate kick' balance drill\u2014looking backward while kicking diagonally challenges his single-leg stability."
+  },
+  {
+    "id": "s2_15",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 15,
+    "name": "TRX Triceps Press",
+    "category": "Upper Body Strength",
+    "prescription": "1 Set \u00d7 12 Reps + 5s Isometric Hold",
+    "timestamp": "33:42 \u2013 34:47",
+    "video": "clips/s2_15.mp4",
+    "poster": "clips/s2_15.jpg",
+    "cues": [
+      "Turn thumbs down, hug elbows tight to the sides, and keep shoulders depressed with breastplate lifted.",
+      "Press straight down and back, squeezing glutes and abs to prevent trunk sway.",
+      "Finish with a 5-second max isometric press hold on the final rep."
+    ],
+    "trainerNote": "Turning thumbs inward/down and hugging elbows back gave him great triceps isolation."
+  },
+  {
+    "id": "s2_16",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 16,
+    "name": "TRX High Biceps Curl",
+    "category": "Upper Body Strength",
+    "prescription": "1 Set \u00d7 10 Reps + 5s Isometric Hold",
+    "timestamp": "35:20 \u2013 36:25",
+    "video": "clips/s2_16.mp4",
+    "poster": "clips/s2_16.jpg",
+    "cues": [
+      "Keep elbows propped up high ('like resting elbows on a high table')\u2014do not let it turn into a row.",
+      "Extend the arms all the way out to full range on every rep before curling back toward the forehead.",
+      "Watch the right elbow when fatigued\u2014cue 'right elbow up' and finish with a 5-second hold."
+    ],
+    "trainerNote": "His right elbow tends to drop slightly lower than the left toward the end of the set; a quick verbal cue fixes it."
+  },
+  {
+    "id": "s2_17",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 17,
+    "name": "Alternating Reverse Lunge",
+    "category": "Lower Body Strength",
+    "prescription": "1 Set \u00d7 14 Reps",
+    "timestamp": "36:52 \u2013 37:57",
+    "video": "clips/s2_17.mp4",
+    "poster": "clips/s2_17.jpg",
+    "cues": [
+      "Step backward into an alternating reverse lunge keeping most of the load on the front leg.",
+      "Lower the back knee under control and drive firmly through the front foot to return to standing.",
+      "Keep chest tall and front knee tracking aligned with the toes."
+    ],
+    "trainerNote": "Reverse lunges load the front hip/quad cleanly with minimal shear stress on the knee."
+  },
+  {
+    "id": "s2_18",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 18,
+    "name": "Single-Leg Standing Hip Circles (Right Leg)",
+    "category": "Hip Mobility & Balance",
+    "prescription": "1 Set \u00d7 8 Reps",
+    "timestamp": "38:42 \u2013 39:42",
+    "video": "clips/s2_18.mp4",
+    "poster": "clips/s2_18.jpg",
+    "cues": [
+      "Stand tall on the left leg to train weight-bearing hip stability.",
+      "Drive the right knee up high and rotate it outward in a full, controlled circle.",
+      "Keep the pelvis facing forward without twisting the torso."
+    ],
+    "trainerNote": "Trains simultaneous weight-bearing stability on the stance hip and open-chain articular rotation on the moving hip."
+  },
+  {
+    "id": "s2_19",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 19,
+    "name": "Single-Leg Standing Hip Circles (Left Leg)",
+    "category": "Hip Mobility & Balance",
+    "prescription": "1 Set \u00d7 8 Reps",
+    "timestamp": "39:50 \u2013 40:50",
+    "video": "clips/s2_19.mp4",
+    "poster": "clips/s2_19.jpg",
+    "cues": [
+      "Stand tall on the right leg and lift the left knee up into a wide outward hip circle.",
+      "Maintain steady single-leg balance and smooth circular tempo.",
+      "Reset foot lightly between reps as needed."
+    ],
+    "trainerNote": "Completes bilateral standing hip rotation work."
+  },
+  {
+    "id": "s2_20",
+    "session": "2026-10-13",
+    "sessionLabel": "Session 2 \u00b7 Tue, Oct 13",
+    "order": 20,
+    "name": "Slant Board Calf Raise",
+    "category": "Lower Leg Strength & Mobility",
+    "prescription": "1 Set \u00d7 14 Reps",
+    "timestamp": "42:35 \u2013 43:40",
+    "video": "clips/s2_20.mp4",
+    "poster": "clips/s2_20.jpg",
+    "cues": [
+      "Drive heels all the way up on the slant board for a maximal peak calf contraction.",
+      "Lower the heels all the way down slowly into a deep dorsiflexion calf stretch.",
+      "Lean slightly forward at the bottom if needed to intensify the calf stretch."
+    ],
+    "trainerNote": "Great finisher combining full-range plantarflexion strength with weighted ankle dorsiflexion stretching."
+  }
+];
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+    let activeId = EXERCISES[0].id;
+
+    const videoEl = document.getElementById('main-video');
+    const videoSrcEl = document.getElementById('main-video-src');
+    const detailSession = document.getElementById('detail-session');
+    const detailCategory = document.getElementById('detail-category');
+    const detailTitle = document.getElementById('detail-title');
+    const detailRx = document.getElementById('detail-rx');
+    const detailTime = document.getElementById('detail-time');
+    const detailCues = document.getElementById('detail-cues');
+    const detailNote = document.getElementById('detail-note');
+    const sessionsContainer = document.getElementById('sessions-container');
+
+    function selectExercise(id, autoplay = true) {
+      const ex = EXERCISES.find(item => item.id === id);
+      if (!ex) return;
+      activeId = ex.id;
+
+      const currentRate = videoEl.playbackRate || 1;
+      videoEl.poster = ex.poster;
+      videoSrcEl.src = ex.video;
+      videoEl.load();
+      videoEl.playbackRate = currentRate;
+      if (autoplay) {
+        videoEl.play().catch(() => {});
+      }
+
+      detailSession.textContent = ex.sessionLabel;
+      detailCategory.textContent = ex.category;
+      detailTitle.textContent = `${ex.order}. ${ex.name}`;
+      detailRx.textContent = ex.prescription;
+      detailTime.textContent = ex.timestamp;
+      detailCues.innerHTML = ex.cues.map(c => `<li>${c}</li>`).join('');
+      detailNote.textContent = ex.trainerNote;
+
+      document.querySelectorAll('.exercise-tile').forEach(tile => {
+        tile.classList.toggle('active', tile.dataset.id === activeId);
+      });
+    }
+
+    function getFilteredExercises() {
+      return EXERCISES.filter(ex => {
+        const matchesSession = currentFilter === 'all' || ex.session === currentFilter;
+        const q = currentSearch.trim().toLowerCase();
+        const matchesSearch = !q ||
+          ex.name.toLowerCase().includes(q) ||
+          ex.category.toLowerCase().includes(q) ||
+          ex.trainerNote.toLowerCase().includes(q) ||
+          ex.cues.some(c => c.toLowerCase().includes(q));
+        return matchesSession && matchesSearch;
+      });
+    }
+
+    function renderGrid() {
+      const filtered = getFilteredExercises();
+      const s1 = filtered.filter(e => e.session === '2026-10-23');
+      const s2 = filtered.filter(e => e.session === '2026-10-13');
+
+      let html = '';
+
+      if (s1.length > 0) {
+        html += `
+          <section class="session-block">
+            <div class="session-header">
+              <h2><span class="session-dot"></span> Session 1 — Friday, October 23, 2026 (${s1.length} Exercises)</h2>
+              <span>Focus: Knee Rehab, Full-Body Strength, Slosh Pipe Core & Active Hang Supersets</span>
+            </div>
+            <div class="tiles-grid">
+              ${s1.map(ex => renderTile(ex)).join('')}
+            </div>
+          </section>
+        `;
+      }
+
+      if (s2.length > 0) {
+        html += `
+          <section class="session-block">
+            <div class="session-header">
+              <h2><span class="session-dot" style="background:var(--bdm-good); box-shadow:0 0 10px var(--bdm-good);"></span> Session 2 — Tuesday, October 13, 2026 (${s2.length} Exercises)</h2>
+              <span>Focus: Core Stability, Hip Flexor Mobility, TRX Upper Body & Single-Leg Balance</span>
+            </div>
+            <div class="tiles-grid">
+              ${s2.map(ex => renderTile(ex)).join('')}
+            </div>
+          </section>
+        `;
+      }
+
+      if (!html) {
+        html = `<div style="padding:2rem; text-align:center; color:var(--bdm-text-muted);">No exercises match your search filter.</div>`;
+      }
+
+      sessionsContainer.innerHTML = html;
+
+      document.querySelectorAll('.exercise-tile').forEach(tile => {
+        tile.addEventListener('click', () => {
+          selectExercise(tile.dataset.id, true);
+          document.getElementById('player-stage').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      });
+    }
+
+    function renderTile(ex) {
+      const isActive = ex.id === activeId ? 'active' : '';
+      return `
+        <article class="exercise-tile ${isActive}" data-id="${ex.id}">
+          <div class="tile-thumb-wrap">
+            <img src="${ex.poster}" alt="${ex.name}" loading="lazy" />
+            <span class="tile-num-badge">#${String(ex.order).padStart(2, '0')}</span>
+            <span class="tile-time-badge">${ex.timestamp}</span>
+          </div>
+          <div class="tile-body">
+            <div class="tile-cat">${ex.category}</div>
+            <div class="tile-title">${ex.name}</div>
+            <div class="tile-rx">${ex.prescription}</div>
+          </div>
+        </article>
+      `;
+    }
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      const list = getFilteredExercises();
+      const idx = list.findIndex(e => e.id === activeId);
+      if (idx > 0) selectExercise(list[idx - 1].id, true);
+      else if (list.length > 0) selectExercise(list[list.length - 1].id, true);
+    });
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+      const list = getFilteredExercises();
+      const idx = list.findIndex(e => e.id === activeId);
+      if (idx >= 0 && idx < list.length - 1) selectExercise(list[idx + 1].id, true);
+      else if (list.length > 0) selectExercise(list[0].id, true);
+    });
+
+    document.querySelectorAll('.speed-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const speed = parseFloat(btn.dataset.speed);
+        videoEl.playbackRate = speed;
+        document.querySelectorAll('.speed-btn').forEach(b => b.classList.toggle('active', b === btn));
+      });
+    });
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentFilter = btn.dataset.filter;
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+        renderGrid();
+      });
+    });
+
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      currentSearch = e.target.value;
+      renderGrid();
+    });
+
+    // Initialize
+    renderGrid();
+    selectExercise(EXERCISES[0].id, false);
+  </script>
+</body>
+</html>
